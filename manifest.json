@@ -1,0 +1,26 @@
+{
+  "name": "Overlay Web Page!",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "My first Chrome extension.",
+  "browser_action": {
+    "default_icon": "news.ico",
+    "default_popup": "popup.html"
+  },
+  
+  "permissions": [
+   "activeTab"
+   ],
+   
+   "background": {
+    "scripts": ["overlay.js"],
+    "persistent": false
+	},
+	
+	"content_scripts": [
+    {
+        "matches": ["https://courses.fit.hcmus.edu.vn/"],
+        "js": ["content.js"]
+    }
+	]
+}
